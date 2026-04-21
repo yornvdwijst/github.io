@@ -34,18 +34,7 @@ nav {
 }
 
 .logo img {
-  height: 100px; /* groter logo */
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--accent);
+  height: 100px;
 }
 
 /* HERO */
@@ -57,10 +46,9 @@ nav a:hover {
   padding: 60px;
   color: white;
 
-  background-image: url('https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1920&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1582719471386-6c9c6a4f9d2c?q=80&w=1920&auto=format&fit=crop');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 .hero::before {
@@ -77,20 +65,14 @@ nav a:hover {
 
 .hero h1 {
   font-size: 46px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  line-height: 1.6;
 }
 
 .btn {
+  margin-top: 20px;
   display: inline-block;
-  margin-top: 25px;
   background: var(--accent);
-  color: white;
   padding: 14px 24px;
+  color: white;
   text-decoration: none;
   border-radius: 6px;
 }
@@ -102,54 +84,52 @@ nav a:hover {
   gap: 40px;
   background: var(--primary);
   color: white;
-  padding: 60px 40px;
+  padding: 60px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .service {
   width: 220px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .service:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .service i {
   font-size: 32px;
   color: var(--accent);
   margin-bottom: 10px;
-  transition: transform 0.3s ease;
 }
 
-.service:hover i {
-  transform: scale(1.2);
-}
-
-.service h3 {
-  margin-top: 10px;
-}
-
-.service p {
-  font-size: 14px;
-}
-
-/* SECTION */
-.section {
+/* ABOUT */
+.about {
   display: flex;
-  padding: 70px;
-  gap: 40px;
-  flex-wrap: wrap;
+  align-items: center;
+  padding: 80px;
+  gap: 60px;
 }
 
-.card {
-  background: var(--light);
-  padding: 35px;
-  border-radius: 12px;
+.about-text {
   flex: 1;
-  min-width: 280px;
+}
+
+.about-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.about-logo img {
+  max-width: 300px;
+  opacity: 0.9;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px;
+  background: var(--light);
 }
 
 /* FOOTER */
@@ -190,7 +170,6 @@ footer {
 
 <!-- SERVICES -->
 <section class="services">
-
   <div class="service">
     <i class="fas fa-microscope"></i>
     <h3>Pharmaceutical Development</h3>
@@ -214,12 +193,11 @@ footer {
     <h3>Problem Solving</h3>
     <p>Expert support for analytical challenges in the pharmaceutical sector.</p>
   </div>
-
 </section>
 
-<!-- ABOUT + CONTACT -->
-<section class="section" id="about">
-  <div class="card">
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-text">
     <h2>About Phanso B.V.</h2>
     <p>
       Phanso B.V., short for Pharmaceutical Analytical Solutions, is an independent 
@@ -232,15 +210,20 @@ footer {
     </p>
   </div>
 
-  <div class="card" id="contact">
-    <h2>Contact</h2>
-    <p>Email: yorn@phanso.nl</p>
-    <p>
-      High Tech Campus 9<br>
-      5656 AE Eindhoven<br>
-      The Netherlands
-    </p>
+  <div class="about-logo">
+    <img src="logo.jpg">
   </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+  <p>Email: yorn@phanso.nl</p>
+  <p>
+    High Tech Campus 9<br>
+    5656 AE Eindhoven<br>
+    The Netherlands
+  </p>
 </section>
 
 <footer>
