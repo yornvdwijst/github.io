@@ -8,7 +8,7 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color: #1a2a3a;
 }
 
@@ -20,6 +20,18 @@ nav {
   padding: 15px 40px;
   background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
 }
 
 nav a {
@@ -27,13 +39,18 @@ nav a {
   text-decoration: none;
   color: #1a2a3a;
   font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #0b5ed7;
 }
 
 /* HERO */
 .hero {
   display: flex;
   align-items: center;
-  padding: 60px;
+  padding: 80px 60px;
   background: linear-gradient(to right, #f5f8fb, #eaf2f7);
 }
 
@@ -42,15 +59,28 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .btn {
+  display: inline-block;
+  margin-top: 20px;
   background: #0b5ed7;
   color: white;
-  padding: 12px 20px;
+  padding: 14px 22px;
   text-decoration: none;
   border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #094bb5;
 }
 
 /* SERVICES */
@@ -59,33 +89,43 @@ nav a {
   justify-content: space-around;
   background: #0f2e4d;
   color: white;
-  padding: 40px;
+  padding: 50px;
+  flex-wrap: wrap;
 }
 
 .service {
   max-width: 220px;
+  margin: 10px;
+  transition: 0.3s;
 }
 
-/* ABOUT + CONTACT */
+.service:hover {
+  transform: translateY(-5px);
+}
+
+/* SECTION */
 .section {
   display: flex;
-  padding: 50px;
+  padding: 60px;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .card {
   background: #f5f8fb;
-  padding: 25px;
+  padding: 30px;
   border-radius: 10px;
   flex: 1;
+  min-width: 280px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: #0f2e4d;
   color: white;
+  margin-top: 40px;
 }
 </style>
 
@@ -94,7 +134,10 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <img src="logo.png" style="height:50px;">
+  <div class="logo">
+    <img src="logo.jpg">
+    <strong>PHANSO</strong>
+  </div>
   <div>
     <a href="#">Home</a>
     <a href="#about">About</a>
@@ -122,15 +165,15 @@ footer {
   </div>
   <div class="service">
     <h3>Method Development</h3>
-    <p>Tailored analytical methods for accuracy and compliance.</p>
+    <p>Tailored analytical methods designed for accuracy and compliance.</p>
   </div>
   <div class="service">
     <h3>Method Validation</h3>
-    <p>Validation according to ICH guidelines ensuring data integrity.</p>
+    <p>Validation according to ICH guidelines ensuring data integrity and quality.</p>
   </div>
   <div class="service">
     <h3>Problem Solving</h3>
-    <p>Expert support for analytical challenges in pharma.</p>
+    <p>Expert support for analytical challenges in the pharmaceutical sector.</p>
   </div>
 </section>
 
@@ -141,17 +184,22 @@ footer {
     <p>
       Phanso B.V., short for Pharmaceutical Analytical Solutions, is an independent 
       analytical laboratory based in the Netherlands.
+    </p>
+    <p>
       We support pharmaceutical and veterinary companies with reliable, precise 
-      and innovative analytical solutions.
+      and innovative analytical solutions, including product development, method 
+      development and validation.
     </p>
   </div>
 
   <div class="card" id="contact">
     <h2>Contact</h2>
     <p>Email: yorn@phanso.nl</p>
-    <p>High Tech Campus 9<br>
-    5656 AE Eindhoven<br>
-    The Netherlands</p>
+    <p>
+      High Tech Campus 9<br>
+      5656 AE Eindhoven<br>
+      The Netherlands
+    </p>
   </div>
 </section>
 
