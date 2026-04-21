@@ -34,7 +34,7 @@ nav {
 }
 
 .logo img {
-  height: 80px;
+  height: 100px; /* groter logo */
 }
 
 nav a {
@@ -56,14 +56,14 @@ nav a:hover {
   align-items: center;
   padding: 60px;
   color: white;
-  background: url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b') center/cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1582719471386-6c9c6a4f9d2c') center/cover no-repeat;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15,46,77,0.7);
+  background: rgba(15,46,77,0.75);
 }
 
 .hero-content {
@@ -105,12 +105,23 @@ nav a:hover {
 
 .service {
   width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .service i {
   font-size: 32px;
   color: var(--accent);
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover i {
+  transform: scale(1.2);
 }
 
 .service h3 {
