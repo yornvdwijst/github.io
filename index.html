@@ -1,26 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Mijn Website</title>
-  <style>
-    body { font-family: Arial; margin: 0; }
-    nav { background: #333; padding: 10px; }
-    nav a { color: white; margin: 10px; text-decoration: none; }
-    header { padding: 60px; text-align: center; background: #f4f4f4; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phanso B.V.</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1a2a3a;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #1a2a3a;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+  background: linear-gradient(to right, #f5f8fb, #eaf2f7);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.btn {
+  background: #0b5ed7;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: space-around;
+  background: #0f2e4d;
+  color: white;
+  padding: 40px;
+}
+
+.service {
+  max-width: 220px;
+}
+
+/* ABOUT + CONTACT */
+.section {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+}
+
+.card {
+  background: #f5f8fb;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f2e4d;
+  color: white;
+}
+</style>
+
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <h2>PHANSO</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<header>
-  <h1>Welkom op mijn website</h1>
-  <p>Dit is mijn professionele pagina</p>
-</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Analytical solutions that drive better pharmaceuticals</h1>
+    <p>
+      Phanso B.V. provides high-quality analytical services for the pharmaceutical 
+      and veterinary industry. From development to validation — we deliver reliable results.
+    </p>
+    <a href="#contact" class="btn">Get in touch</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="service">
+    <h3>Pharmaceutical Development</h3>
+    <p>Supporting development of medicinal products from early stage to market.</p>
+  </div>
+  <div class="service">
+    <h3>Method Development</h3>
+    <p>Tailored analytical methods for accuracy and compliance.</p>
+  </div>
+  <div class="service">
+    <h3>Method Validation</h3>
+    <p>Validation according to ICH guidelines ensuring data integrity.</p>
+  </div>
+  <div class="service">
+    <h3>Problem Solving</h3>
+    <p>Expert support for analytical challenges in pharma.</p>
+  </div>
+</section>
+
+<!-- ABOUT + CONTACT -->
+<section class="section" id="about">
+  <div class="card">
+    <h2>About Phanso B.V.</h2>
+    <p>
+      Phanso B.V., short for Pharmaceutical Analytical Solutions, is an independent 
+      analytical laboratory based in the Netherlands.
+      We support pharmaceutical and veterinary companies with reliable, precise 
+      and innovative analytical solutions.
+    </p>
+  </div>
+
+  <div class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Email: yorn@phanso.nl</p>
+    <p>High Tech Campus 9<br>
+    5656 AE Eindhoven<br>
+    The Netherlands</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Phanso B.V. | Pharmaceutical Analytical Solutions
+</footer>
 
 </body>
 </html>
