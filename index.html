@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phanso B.V.</title>
 
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -24,51 +23,46 @@ body {
 /* NAVBAR */
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
   padding: 20px 60px;
   background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
 }
 
-.logo img {
-  height: 100px;
+nav a {
+  margin-left: 15px;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: var(--primary);
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  height: 85vh;
-  display: flex;
-  align-items: center;
-  padding: 60px;
+nav a:hover {
+  background: var(--accent);
   color: white;
-
-  background-image: url('https://images.unsplash.com/photo-1582719471386-6c9c6a4f9d2c?q=80&w=1920&auto=format&fit=crop');
-  background-size: cover;
-  background-position: center;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(15,46,77,0.75);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 600px;
+/* HERO (premium minimal) */
+.hero {
+  padding: 120px 60px;
+  background: linear-gradient(to right, #f5f8fb, #eaf7f6);
 }
 
 .hero h1 {
-  font-size: 46px;
+  font-size: 52px;
+  max-width: 700px;
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
 }
 
 .btn {
-  margin-top: 20px;
+  margin-top: 25px;
   display: inline-block;
   background: var(--accent);
   padding: 14px 24px;
@@ -95,7 +89,7 @@ nav {
 }
 
 .service:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-10px) scale(1.05);
 }
 
 .service i {
@@ -104,32 +98,50 @@ nav {
   margin-bottom: 10px;
 }
 
-/* ABOUT */
+/* PREMIUM ABOUT */
 .about {
-  display: flex;
-  align-items: center;
-  padding: 80px;
-  gap: 60px;
+  position: relative;
+  padding: 100px 60px;
+  background: white;
+  overflow: hidden;
 }
 
-.about-text {
-  flex: 1;
+.about::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  background: url('logo.jpg') no-repeat center/contain;
+  opacity: 0.05;
 }
 
-.about-logo {
-  flex: 1;
-  text-align: center;
+.about-content {
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
 }
 
-.about-logo img {
-  max-width: 300px;
-  opacity: 0.9;
+.about h2 {
+  font-size: 36px;
+  color: var(--primary);
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 /* CONTACT */
 .contact {
-  padding: 60px;
+  padding: 80px 60px;
   background: var(--light);
+}
+
+.contact h2 {
+  color: var(--primary);
 }
 
 /* FOOTER */
@@ -146,30 +158,24 @@ footer {
 
 <!-- NAV -->
 <nav>
-  <div class="logo">
-    <img src="logo.jpg">
-  </div>
-  <div>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>Analytical solutions that drive better pharmaceuticals</h1>
-    <p>
-      Phanso B.V. provides high-quality analytical services for the pharmaceutical 
-      and veterinary industry. From development to validation — we deliver reliable results.
-    </p>
-    <a href="#contact" class="btn">Get in touch</a>
-  </div>
+  <h1>Analytical solutions that drive better pharmaceuticals</h1>
+  <p>
+    Phanso B.V. provides high-quality analytical services for the pharmaceutical 
+    and veterinary industry. From development to validation — we deliver reliable results.
+  </p>
+  <a href="#contact" class="btn">Get in touch</a>
 </section>
 
 <!-- SERVICES -->
 <section class="services">
+
   <div class="service">
     <i class="fas fa-microscope"></i>
     <h3>Pharmaceutical Development</h3>
@@ -193,11 +199,12 @@ footer {
     <h3>Problem Solving</h3>
     <p>Expert support for analytical challenges in the pharmaceutical sector.</p>
   </div>
+
 </section>
 
-<!-- ABOUT -->
+<!-- PREMIUM ABOUT -->
 <section class="about" id="about">
-  <div class="about-text">
+  <div class="about-content">
     <h2>About Phanso B.V.</h2>
     <p>
       Phanso B.V., short for Pharmaceutical Analytical Solutions, is an independent 
@@ -208,10 +215,6 @@ footer {
       and innovative analytical solutions, including product development, method 
       development and validation.
     </p>
-  </div>
-
-  <div class="about-logo">
-    <img src="logo.jpg">
   </div>
 </section>
 
