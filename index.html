@@ -113,6 +113,19 @@ footer p { margin: 0; }
 .page-hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); }
 .page-hero .btn-outline { color: var(--primary); border-color: #b8c7d1; }
 .page-hero .btn-outline:hover { background: white; }
+
+/* Additional Phanso brand and laboratory photography */
+.home-logo-panel { display:flex; align-items:center; justify-content:center; padding:30px; margin-bottom:22px; background:#fff; border:1px solid var(--border); border-radius:12px; min-height:170px; }
+.home-logo-panel img { display:block; width:min(100%, 330px); max-height:150px; object-fit:contain; }
+.photo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.photo-card { overflow:hidden; background:#fff; border:1px solid var(--border); border-radius:12px; }
+.photo-card img { display:block; width:100%; height:270px; object-fit:cover; }
+.photo-card .photo-copy { padding:20px 22px 22px; }
+.photo-card h3 { margin:0 0 7px; color:var(--primary); }
+.photo-card p { margin:0; color:var(--muted); }
+.service-photo { width:100%; display:block; height:auto; max-height:320px; object-fit:cover; border-radius:10px; margin:0 0 20px; }
+@media (max-width: 760px) { .photo-grid { grid-template-columns:1fr; } .photo-card img { height:230px; } .home-logo-panel { min-height:130px; padding:20px; } .home-logo-panel img { max-height:110px; } }
+
 @media (max-width: 760px) {
   .container { width: min(var(--max-width), calc(100% - 32px)); }
   .nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 8px; }
@@ -195,6 +208,26 @@ footer p { margin: 0; }
   </div>
 </section>
 
+<section class="section section-light" id="laboratory">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Inside the laboratory</p>
+      <h2>Practical laboratory work, focused on useful results</h2>
+      <p>Phanso combines formulation-focused laboratory investigation with chromatographic analysis to help answer pharmaceutical development questions.</p>
+    </div>
+    <div class="photo-grid">
+      <article class="photo-card">
+        <img src="./DSC00431.jpg" alt="Laboratory glassware used in pharmaceutical research" loading="lazy">
+        <div class="photo-copy"><h3>Formulation and product development</h3><p>Laboratory investigations to understand product composition, formulation behaviour and development challenges.</p></div>
+      </article>
+      <article class="photo-card">
+        <img src="./DSC00463.jpg" alt="HPLC sample vials prepared for analytical testing" loading="lazy">
+        <div class="photo-copy"><h3>HPLC and UPLC analysis</h3><p>Analytical method development, optimization and testing to generate reliable, meaningful data.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section section-light">
   <div class="container two-col">
     <div class="prose">
@@ -204,7 +237,9 @@ footer p { margin: 0; }
       <p>We combine product-focused investigation with analytical method development to help clients understand formulation behaviour, generate useful analytical data and investigate difficult technical questions.</p>
       <p>Our work can support projects at different stages, from early formulation research and analytical characterization to method optimization and quality-control support.</p>
     </div>
-    <aside class="info-panel">
+    <aside>
+      <div class="home-logo-panel"><img src="./logo.jpg" alt="Phanso — Pharmaceutical Analytical Solutions" loading="lazy"></div>
+      <div class="info-panel">
       <h3>How Phanso can help</h3>
       <ul class="check-list">
         <li>Develop or optimize an HPLC/UPLC method</li>
@@ -213,6 +248,7 @@ footer p { margin: 0; }
         <li>Assess stability-related analytical changes</li>
         <li>Support pharmaceutical R&amp;D and QC challenges</li>
       </ul>
+      </div>
     </aside>
   </div>
 </section>

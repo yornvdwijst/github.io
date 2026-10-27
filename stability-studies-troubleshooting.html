@@ -113,6 +113,19 @@ footer p { margin: 0; }
 .page-hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); }
 .page-hero .btn-outline { color: var(--primary); border-color: #b8c7d1; }
 .page-hero .btn-outline:hover { background: white; }
+
+/* Additional Phanso brand and laboratory photography */
+.home-logo-panel { display:flex; align-items:center; justify-content:center; padding:30px; margin-bottom:22px; background:#fff; border:1px solid var(--border); border-radius:12px; min-height:170px; }
+.home-logo-panel img { display:block; width:min(100%, 330px); max-height:150px; object-fit:contain; }
+.photo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.photo-card { overflow:hidden; background:#fff; border:1px solid var(--border); border-radius:12px; }
+.photo-card img { display:block; width:100%; height:270px; object-fit:cover; }
+.photo-card .photo-copy { padding:20px 22px 22px; }
+.photo-card h3 { margin:0 0 7px; color:var(--primary); }
+.photo-card p { margin:0; color:var(--muted); }
+.service-photo { width:100%; display:block; height:auto; max-height:320px; object-fit:cover; border-radius:10px; margin:0 0 20px; }
+@media (max-width: 760px) { .photo-grid { grid-template-columns:1fr; } .photo-card img { height:230px; } .home-logo-panel { min-height:130px; padding:20px; } .home-logo-panel img { max-height:110px; } }
+
 @media (max-width: 760px) {
   .container { width: min(var(--max-width), calc(100% - 32px)); }
   .nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 8px; }
@@ -175,6 +188,8 @@ footer p { margin: 0; }
       </ul>
     </div>
     <aside class="info-panel">
+      <img class="service-photo" src="./DSC00463.jpg" alt="HPLC sample vials prepared for analytical testing" loading="lazy">
+      
       <h3>Clear scope and interpretation</h3>
       <p>Stability testing requirements depend on the product, intended purpose and applicable regulatory framework. Phanso can discuss the proposed analytical work and reporting scope before a project begins.</p>
       <p>Formal stability programmes, shelf-life claims, GMP testing or regulatory submissions should only be represented as such where the required facilities, procedures, quality system and study design are in place.</p>
