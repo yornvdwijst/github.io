@@ -42,7 +42,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
   border-bottom: 1px solid rgba(220,229,235,.8);
 }
 .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { text-decoration: none; font-weight: 800; letter-spacing: .12em; font-size: 1.35rem; color: var(--primary); }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; text-decoration: none; color: var(--primary); }
+.brand img { display: block; width: auto; height: 48px; max-width: 190px; object-fit: contain; }
 .nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
 .nav-links a { text-decoration: none; padding: 10px 13px; border-radius: 6px; color: var(--primary); font-weight: 600; font-size: .94rem; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { background: var(--light); }
@@ -115,6 +116,7 @@ footer p { margin: 0; }
 @media (max-width: 760px) {
   .container { width: min(var(--max-width), calc(100% - 32px)); }
   .nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 8px; }
+  .brand img { height: 42px; max-width: 170px; }
   .nav-links { gap: 2px; }
   .nav-links a { padding: 8px 10px; font-size: .9rem; }
   .card-grid, .two-col, .contact-grid { grid-template-columns: 1fr; }
@@ -132,7 +134,7 @@ footer p { margin: 0; }
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <nav class="container nav" aria-label="Main navigation">
-    <a class="brand" href="index.html" aria-label="Phanso home">PHANSO</a>
+    <a class="brand" href="index.html" aria-label="Phanso home"><img src="./logo.jpg" alt="Phanso logo"></a>
     <div class="nav-links">
       <a href="index.html" aria-current="page">Home</a>
       <a href="veterinary-pharmaceutical-development.html" >Veterinary Development</a>
