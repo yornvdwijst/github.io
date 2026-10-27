@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veterinary Pharmaceutical Development | Phanso</title>
+  <meta name="description" content="Phanso provides independent R&D and analytical support for veterinary medicinal products, including formulation development, pharmaceutical characterization, HPLC/UPLC methods and stability-related investigations.">
+  <link rel="canonical" href="https://www.phanso.nl/veterinary-pharmaceutical-development.html">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+:root {
+  --primary: #0f2e4d;
+  --primary-deep: #092139;
+  --accent: #1bb3a7;
+  --accent-dark: #148d85;
+  --text: #203244;
+  --muted: #5d6c79;
+  --light: #f4f7fa;
+  --white: #fff;
+  --border: #dce5eb;
+  --max-width: 1160px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  background: var(--white);
+}
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.container { width: min(var(--max-width), calc(100% - 48px)); margin: 0 auto; }
+.skip-link { position: absolute; left: -9999px; top: 8px; background: white; padding: 10px; z-index: 1000; }
+.skip-link:focus { left: 8px; }
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(220,229,235,.8);
+}
+.nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { text-decoration: none; font-weight: 800; letter-spacing: .12em; font-size: 1.35rem; color: var(--primary); }
+.nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.nav-links a { text-decoration: none; padding: 10px 13px; border-radius: 6px; color: var(--primary); font-weight: 600; font-size: .94rem; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { background: var(--light); }
+.nav-links .nav-contact { background: var(--accent); color: white; }
+.nav-links .nav-contact:hover { background: var(--accent-dark); }
+.hero {
+  position: relative; overflow: hidden; color: white;
+  background: linear-gradient(110deg, rgba(9,33,57,.95), rgba(15,46,77,.82)),
+    url("https://images.unsplash.com/photo-1581093458791-9d3c1a4c0f68?q=80&w=1920&auto=format&fit=crop") center/cover;
+}
+.hero-inner { padding: clamp(76px, 10vw, 132px) 0; max-width: 850px; }
+.eyebrow { color: var(--accent); text-transform: uppercase; font-weight: 800; letter-spacing: .13em; font-size: .78rem; margin: 0 0 15px; }
+.hero h1 { margin: 0; max-width: 850px; font-size: clamp(2.35rem, 5vw, 4.1rem); line-height: 1.08; letter-spacing: -.035em; }
+.hero p { max-width: 720px; font-size: clamp(1.05rem, 1.8vw, 1.2rem); color: rgba(255,255,255,.9); margin: 24px 0 0; }
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn { display: inline-block; padding: 13px 21px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline { color: white; border: 1px solid rgba(255,255,255,.65); }
+.btn-outline:hover { background: rgba(255,255,255,.1); }
+.section { padding: 78px 0; }
+.section-light { background: var(--light); }
+.section-dark { background: var(--primary); color: white; }
+.section-heading { max-width: 760px; margin-bottom: 34px; }
+.section-heading h2 { color: var(--primary); font-size: clamp(1.8rem, 3.2vw, 2.55rem); line-height: 1.2; margin: 0 0 15px; letter-spacing: -.025em; }
+.section-dark .section-heading h2 { color: white; }
+.section-heading p { color: var(--muted); margin: 0; font-size: 1.06rem; }
+.section-dark .section-heading p { color: rgba(255,255,255,.78); }
+.card-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+.service-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 27px; height: 100%; }
+.service-card .icon { color: var(--accent-dark); font-size: 1.6rem; margin-bottom: 12px; }
+.service-card h3 { margin: 0 0 10px; color: var(--primary); font-size: 1.2rem; line-height: 1.35; }
+.service-card p { margin: 0 0 15px; color: var(--muted); }
+.text-link { color: var(--primary); font-weight: 750; text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+.text-link:hover { color: var(--accent-dark); }
+.two-col { display: grid; grid-template-columns: 1.15fr .85fr; gap: 52px; align-items: start; }
+.prose h2 { color: var(--primary); font-size: clamp(1.8rem, 3vw, 2.45rem); line-height: 1.2; margin: 0 0 18px; }
+.prose h3 { color: var(--primary); margin: 27px 0 8px; }
+.prose p { margin: 0 0 17px; }
+.check-list { padding-left: 1.25rem; margin: 15px 0; }
+.check-list li { margin: 8px 0; padding-left: 3px; }
+.info-panel { background: var(--light); border-radius: 12px; padding: 28px; border: 1px solid var(--border); }
+.info-panel h3 { color: var(--primary); margin-top: 0; }
+.info-panel p:last-child { margin-bottom: 0; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+.pill { border: 1px solid var(--border); border-radius: 999px; padding: 7px 12px; font-size: .9rem; color: var(--primary); background: white; }
+.cta-band { background: #e9f7f6; padding: 42px 0; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.cta-inner h2 { margin: 0 0 8px; color: var(--primary); font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.25; }
+.cta-inner p { margin: 0; color: var(--muted); max-width: 700px; }
+.cta-inner .btn { white-space: nowrap; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.contact-item { background: white; padding: 24px; border: 1px solid var(--border); border-radius: 10px; }
+.contact-item h3 { margin: 0 0 8px; color: var(--primary); }
+.contact-item p { margin: 0; color: var(--muted); }
+.contact-item a { color: var(--primary); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+footer { padding: 25px 0; background: var(--primary-deep); color: rgba(255,255,255,.82); font-size: .9rem; }
+.footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+footer p { margin: 0; }
+.breadcrumb { padding: 18px 0 0; font-size: .9rem; color: var(--muted); }
+.breadcrumb a { color: var(--primary); text-decoration: none; }
+.page-hero { background: var(--light); border-bottom: 1px solid var(--border); }
+.page-hero .hero-inner { padding: 64px 0 70px; color: var(--primary); }
+.page-hero .hero-inner p { color: var(--muted); }
+.page-hero .eyebrow { color: var(--accent-dark); }
+.page-hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.5rem); }
+.page-hero .btn-outline { color: var(--primary); border-color: #b8c7d1; }
+.page-hero .btn-outline:hover { background: white; }
+@media (max-width: 760px) {
+  .container { width: min(var(--max-width), calc(100% - 32px)); }
+  .nav { align-items: flex-start; flex-direction: column; padding: 15px 0; gap: 8px; }
+  .nav-links { gap: 2px; }
+  .nav-links a { padding: 8px 10px; font-size: .9rem; }
+  .card-grid, .two-col, .contact-grid { grid-template-columns: 1fr; }
+  .two-col { gap: 28px; }
+  .section { padding: 56px 0; }
+  .cta-inner { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Phanso home">PHANSO</a>
+    <div class="nav-links">
+      <a href="index.html" >Home</a>
+      <a href="veterinary-pharmaceutical-development.html" aria-current="page">Veterinary Development</a>
+      <a href="hplc-method-development-validation.html" >HPLC Methods</a>
+      <a href="formulation-development-deformulation.html" >Formulation</a>
+      <a href="stability-studies-troubleshooting.html" >Stability &amp; Troubleshooting</a>
+      <a class="nav-contact" href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> / Veterinary Pharmaceutical Development</div>
+    <div class="hero-inner">
+      <p class="eyebrow">Pharmaceutical R&amp;D</p>
+      <h1>Veterinary Pharmaceutical Development</h1>
+      <p>Practical development and analytical support for veterinary medicinal products, from early formulation research to product characterization and investigation of technical challenges.</p>
+      <div class="button-row"><a class="btn btn-primary" href="index.html#contact">Discuss a project</a><a class="btn btn-outline" href="hplc-method-development-validation.html">Explore HPLC services</a></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container two-col">
+    <div class="prose">
+      <h2>Development support for veterinary medicines</h2>
+      <p>Developing a veterinary medicinal product can involve challenges in formulation composition, solubility, analytical performance and stability. Phanso provides independent laboratory support to investigate these questions and generate data that can guide development decisions.</p>
+      <p>Our work focuses on the connection between the product and the analytical methods used to understand it. Depending on project needs, this may include formulation screening, pharmaceutical characterization, HPLC/UPLC method development and investigation of unexpected results.</p>
+      <h3>Areas of support</h3>
+      <ul class="check-list">
+        <li>Formulation development and comparative characterization</li>
+        <li>Analytical method development and optimization</li>
+        <li>Assay and impurity analysis</li>
+        <li>Stability-related analytical investigations</li>
+        <li>Troubleshooting during product development or QC</li>
+      </ul>
+    </div>
+    <aside class="info-panel">
+      <h3>Suitable project needs</h3>
+      <p>Phanso may be a fit when you need focused R&amp;D capacity, an independent investigation of a pharmaceutical problem, or specialist analytical input alongside your internal development team.</p>
+      <p>Support is scoped to the specific project and agreed analytical requirements.</p>
+    </aside>
+  </div>
+</section>
+<section class="section section-light">
+  <div class="container">
+    <div class="section-heading"><h2>From development question to useful data</h2><p>Projects can be tailored to the question at hand, with the scope, methods and deliverables agreed before work begins.</p></div>
+    <div class="card-grid">
+      <article class="service-card"><h3>Understand the product</h3><p>Investigate formulation characteristics, composition-related questions and analytical behaviour.</p></article>
+      <article class="service-card"><h3>Build analytical capability</h3><p>Develop or optimize methods to support product characterization, assay testing or impurity assessment.</p></article>
+      <article class="service-card"><h3>Investigate changes</h3><p>Examine stability trends, unexpected peaks, recovery issues or other changes in analytical results.</p></article>
+      <article class="service-card"><h3>Support the next decision</h3><p>Generate clear, project-specific findings to inform further formulation, analytical or testing work.</p></article>
+    </div>
+  </div>
+</section>
+<section class="cta-band"><div class="container cta-inner"><div><h2>Looking for support with a veterinary pharmaceutical project?</h2><p>Tell us about the product, development stage and technical question you need to address.</p></div><a class="btn btn-primary" href="index.html#contact">Contact Phanso</a></div></section>
+
+</main>
+<footer>
+  <div class="container footer-inner">
+    <p>© 2026 Phanso B.V. | Pharmaceutical Analytical Solutions</p>
+    <p>Independent pharmaceutical R&amp;D laboratory · The Netherlands</p>
+  </div>
+</footer>
+</body>
+</html>
