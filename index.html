@@ -119,7 +119,7 @@ footer p { margin: 0; }
 .home-logo-panel img { display:block; width:min(100%, 330px); max-height:150px; object-fit:contain; }
 .photo-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
 .photo-card { overflow:hidden; background:#fff; border:1px solid var(--border); border-radius:12px; }
-.photo-card img { display:block; width:100%; height:270px; object-fit:cover; }
+.photo-card:first-child img { object-fit: contain; background: #f4f7fa; }
 .photo-card .photo-copy { padding:20px 22px 22px; }
 .photo-card h3 { margin:0 0 7px; color:var(--primary); }
 .photo-card p { margin:0; color:var(--muted); }
