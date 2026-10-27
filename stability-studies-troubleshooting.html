@@ -123,7 +123,6 @@ footer p { margin: 0; }
 .photo-card .photo-copy { padding:20px 22px 22px; }
 .photo-card h3 { margin:0 0 7px; color:var(--primary); }
 .photo-card p { margin:0; color:var(--muted); }
-
 .service-photo { width:100%; display:block; height:auto; max-height:320px; object-fit:cover; object-position:center; border-radius:10px; margin:0 0 20px; }
 .service-photo[src*="DSC00463"] { transform: scale(1.0); }
 
@@ -191,7 +190,9 @@ footer p { margin: 0; }
       </ul>
     </div>
     <aside class="info-panel">
-    <img class="service-photo" src="./DSC00463.JPG" alt="HPLC sample vials prepared for analytical testing" loading="lazy">
+<div style="width:100%; height:320px; overflow:hidden; border-radius:10px; margin-bottom:20px;">
+  <img src="./DSC00463.JPG" alt="HPLC sample vials prepared for analytical testing" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:center; transform:scale(1.5);">
+</div>
       
       <h3>Clear scope and interpretation</h3>
       <p>Stability testing requirements depend on the product, intended purpose and applicable regulatory framework. Phanso can discuss the proposed analytical work and reporting scope before a project begins.</p>
